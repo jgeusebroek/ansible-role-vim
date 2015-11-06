@@ -1,0 +1,20 @@
+---
+- name: set global default editor to vim on Rhel family
+  lineinfile:
+    dest: /etc/profile.d/vim.sh
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    insertafter: "EOF"
+  with_items:
+    - { regexp: '^export VISUAL="vim"', line: 'export VISUAL="vim"' }
+    - { regexp: '^export EDITOR="vim"', line: 'export EDITOR="vim"' }
+  when: ansible_os_family == 'RedHat' and vim_default_editor
+
+  # Debian does this by default
+- name: adding source vimrc.local for Rhel family
+  lineinfile:
+    state=present
+    dest=/etc/vimrc
+    insertafter=EOF
+    line='source /etc/vim/vimrc.local'
+  when: ansible_os_family == 'RedHat'

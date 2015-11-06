@@ -1,0 +1,16 @@
+---
+- name: create configuration directory for vim
+  file:
+    state=directory
+    dest=/etc/vim
+    owner=root
+    group=root
+    mode=0755
+
+- name: configure vim global options
+  template:
+    src=vimrc.local.j2
+    dest=/etc/vim/vimrc.local
+    owner=root
+    group=root
+    mode=0644

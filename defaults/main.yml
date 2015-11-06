@@ -1,0 +1,6 @@
+---
+# Should vim be the default (global) editor?
+vim_default_editor: true
+
+# global vim configuration values
+vim_config: [ "syntax enable" ]
