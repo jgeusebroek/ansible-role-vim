@@ -1,7 +1,7 @@
 ---
 - stat: path=/etc/alternatives/editor
   register: editor
-  when: ansible_os_family == 'Debian' and vim_default_editor
+  when: ansible_os_family == 'Debian'
 
 - name: set global default editor to vim on Debian family
   shell: 'update-alternatives --set editor /usr/bin/vim.basic'
