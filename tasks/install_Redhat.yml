@@ -1,4 +1,6 @@
 ---
-- name: install vim on Rhel familiy
-  yum: pkg=vim state=present
+- name: Install vim | Rhel
+  yum:
+    pkg: 'vim'
+    state: present
   when: ansible_os_family == 'RedHat'

@@ -1,4 +1,6 @@
 ---
-- name: install vim on Debian familiy
-  apt: pkg=vim state=present
+- name: Install vim | Debian
+  apt:
+    pkg: 'vim'
+    state: present
   when: ansible_os_family == 'Debian'
