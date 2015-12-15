@@ -1,5 +1,5 @@
 ---
-- name: Check if vim is the default editor
+- name: Check if vim is the default editor | Debian
   stat:
     path: '/etc/alternatives/editor'
   register: editor

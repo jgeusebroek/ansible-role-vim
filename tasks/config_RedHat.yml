@@ -11,7 +11,7 @@
   when: ansible_os_family == 'RedHat' and vim_default_editor
 
   # Debian does this by default
-- name: Adding source vimrc.local for Rhel family
+- name: Adding source vimrc.local for Rhel family | Rhel
   lineinfile:
     state: present
     dest: '/etc/vimrc'
