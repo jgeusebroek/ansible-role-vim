@@ -3,4 +3,3 @@
   yum:
     pkg: 'vim'
     state: present
-  when: ansible_os_family == 'RedHat'
