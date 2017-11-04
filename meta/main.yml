@@ -5,7 +5,7 @@ galaxy_info:
   author: Jeroen Geusebroek
   description: Installs and (globally) configure vim on RedHat/CentOS or Debian/Ubuntu.
   license: "license (BSD, MIT)"
-  min_ansible_version: 1.2
+  min_ansible_version: 2.4
   platforms:
   - name: EL
     versions:

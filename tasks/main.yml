@@ -1,14 +1,14 @@
 ---
-- include: "install_Debian.yml"
+- import_tasks: "install_Debian.yml"
   when: ansible_os_family == 'Debian'
 
-- include: "install_RedHat.yml"
+- import_tasks: "install_RedHat.yml"
   when: ansible_os_family == 'RedHat'
 
-- include: "config.yml"
+- import_tasks: "config.yml"
 
-- include: "config_RedHat.yml"
+- import_tasks: "config_RedHat.yml"
   when: ansible_os_family == 'RedHat'
 
-- include: "config_Debian.yml"
+- import_tasks: "config_Debian.yml"
   when: ansible_os_family == 'Debian'
