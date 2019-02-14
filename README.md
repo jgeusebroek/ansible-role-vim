@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/jgeusebroek/ansible-role-vim.svg?branch=master)](https://travis-ci.org/jgeusebroek/ansible-role-vim)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-vim-blue.svg)](https://galaxy.ansible.com/jgeusebroek/vim)
+
 # Ansible role: vim
 
 An Ansible Role that installs and (globally) configures vim on RedHat/CentOS or Debian/Ubuntu.
